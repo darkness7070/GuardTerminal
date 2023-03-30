@@ -42,6 +42,9 @@ namespace GuardTerminal.Pages
             {
                 return;
             }
+            applications = applications
+                .Where(x => x.Application.IdStatusNavigation.Id == 3 || x.Application.IdStatusNavigation.Id == 5)
+                .ToList();
             datagrid.ItemsSource = applications
                 .Select(x=>x.Application)
                 .ToList();
@@ -126,25 +129,21 @@ namespace GuardTerminal.Pages
             await GetData();
             SelectionChanged();
         }
-
         private async void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
             await GetData();
             SelectionChanged();
         }
-
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             cmbTypes.SelectedValue = null;
             cmbSubdivisions.SelectedValue = null;
             cmbDate.SelectedValue = null;
         }
-
         private void boxSeries_TextChanged(object sender, TextChangedEventArgs e)
         {
            SelectionChanged();
         }
-
         private void boxFullname_TextChanged(object sender, TextChangedEventArgs e)
         {
             SelectionChanged();

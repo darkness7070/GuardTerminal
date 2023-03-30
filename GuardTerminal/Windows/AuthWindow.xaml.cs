@@ -48,8 +48,9 @@ namespace GuardTerminal
 
         private async void btnAuth_Click(object sender, RoutedEventArgs e)
         {
-            btnAuth.IsEnabled = false;
             if (String.IsNullOrWhiteSpace(boxCode.Text)) return;
+            btnAuth.IsEnabled = false;
+
             if (await Auth(boxCode.Text))
             {
                 MainWindow newWin = new();

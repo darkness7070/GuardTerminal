@@ -26,7 +26,7 @@ public partial class Application
     public int IdWorker { get; set; }
 
     public byte[]? Passport { get; set; }
-
+    public DateTime? StartTime { get; set; }
     public DateTime? ArrivalTime { get; set; }
     public string ArrivalTimeStr 
     {

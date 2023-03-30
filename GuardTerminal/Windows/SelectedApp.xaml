@@ -55,13 +55,13 @@
 
                     <TextBlock Name="txtType" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="12,3"/>
                     <Button Grid.Column="1" Grid.Row="1" Content="Открыть" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="6" Padding="12,3" Click="btnPassport_Click"/>
-                    <DatePicker Name="datepicker" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="6"/>
-                    <ComboBox Name="cmbTime" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Margin="6" SelectionChanged="ComboBox_SelectionChanged"/>
+                    <TextBlock Name="txtArrivalTime" Padding="12,3" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="6"/>
+                    <ComboBox Name="cmbLeavingTime" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Margin="6"/>
 
                     <TextBlock Text="Тип заявки:" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="12,3"/>
                     <TextBlock Text="Паспорт" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="12,3"/>
-                    <TextBlock Text="Дата посещения:" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="12,3"/>
-                    <TextBlock Text="Время посещения:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="12,3"/>
+                    <TextBlock Text="Время посещения:" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="12,3"/>
+                    <TextBlock Text="Время убытия:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="12,3"/>
 
                 </Grid>
                 <Grid>
@@ -95,8 +95,7 @@
 
         <TextBlock FontSize="24" Text="Заявка #" Name="txtName" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2">
-            <Button Content="Одобрить" Padding="12,3" Margin="0,0,6,0" Click="Accept_Click" Name="btnAccept"/>
-            <Button Content="Отклонить" Padding="12,3" Margin="0,0,6,0" Click="Reject_Click" Name="btnReject"/>
+            <Button Content="Разрешить вход" Padding="12,3" Margin="0,0,6,0" Click="Accept_Click" Name="btnAccept"/>
             <Button Content="Отмена" Padding="12,3" Margin="0,0,6,0" Click="btnClose_Click" />
         </StackPanel>
 
