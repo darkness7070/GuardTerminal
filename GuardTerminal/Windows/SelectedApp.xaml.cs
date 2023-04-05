@@ -104,7 +104,7 @@ namespace GuardTerminal.Windows
             HttpResponseMessage response;
             try
             {
-                response = await client.GetAsync($"http://localhost:5220/general/acceptapp?id={id}");
+                response = await client.PostAsJsonAsync($"http://localhost:5220/general/acceptapp", new RequestArrival(id,date));
             }
             catch
             {
